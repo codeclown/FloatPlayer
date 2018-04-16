@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+            * { margin: 0; padding: 0; box-sizing: border-box; }
+            
+            html,
+            body,
+            .app { width: 100%; height: 100%; }
+            
+            iframe { display: block; }
+        </style>
+    </head>
+    <body>
+        <div class="app"></div>
+        <script>
+            const data = __DATA__;
+
+            const script = document.createElement('script');
+            script.src = 'https://www.youtube.com/player_api';
+            document.body.appendChild(script);
+            
+            let player;
+            function onYouTubePlayerAPIReady() {
+                player = new YT.Player(document.querySelector('.app'), {
+                    height: document.height,
+                    width: document.width,
+                    videoId: data.videoId,
+                    playerVars: {
+                        autoplay: true,
+                        disablekb: false,
+                        fs: false,
+                        modestbranding: true,
+                        rel: false,
+                        iv_load_policy: 3 // No annotations
+                    }
+                });
+            }
+        
+            window.controlFunctions = {
+                stopVideo: () => player.pauseVideo()
+            };
+        </script>
+    </body>
+</html>
