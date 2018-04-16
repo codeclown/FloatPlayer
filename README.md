@@ -18,7 +18,7 @@ It's also completely open source.
 
 ## Download
 
-[**Download v0.1**](https://github.com/codeclown/FloatPlayer/releases)
+[**Download v0.1**](https://github.com/codeclown/FloatPlayer/releases/download/v0.1/FloatPlayer.zip) (3.1mb)
 
 Requires macOS High Sierra.
 
